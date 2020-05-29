@@ -1,5 +1,4 @@
 # Conversion Rate
-@ 20200529 Chunlei Zhou
 
 ## Project Introduction
 
