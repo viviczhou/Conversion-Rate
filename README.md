@@ -1,4 +1,4 @@
-# Predict The Conversion Rate
+# Predict The Conversion Rate Based on Users' Characteristic
 
 ## Project Introduction
 
