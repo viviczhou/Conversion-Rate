@@ -42,10 +42,12 @@ Count converted sessions and divided by total number of sessions.
 
 ## Exploratory Analysis:
 
-Based on the result of correlation analysis of numerical features, as shown in Figure 1, features are independent and among all, total pages visited influenced the conversion most.
-![Figure 1: Correlation Heatmap](https://github.com/viviczhou/Conversion-Rate/blob/master/Correlation%20Heatmap.png)
-Users visit more pages tend to have a higher conversion rate.
+Based on the result of correlation analysis of numerical features, as shown in Figure 1, features are independent and among all, total pages visited influenced the conversion most. 
 
+![Figure 1: Correlation Heatmap](https://github.com/viviczhou/Conversion-Rate/blob/master/Correlation%20Heatmap.png)
+
+Users visit more pages tend to have a higher conversion rate.
+![Figure 2: Relationship between Total Pages Visited and Conversion Rate](Tpv vs cr.png)
 Customers with age in range of 15 to 30 tend to have higher conversion rate.
 As for categorical feature, according to the bar plots shown below, in which country is the user also influence the conversion. The user source does not show too much impact on the conversion.
 
