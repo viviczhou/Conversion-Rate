@@ -48,7 +48,7 @@ Each row is a user session.
 
 Based on the result of correlation analysis of numerical features, as shown in Figure 1, features are independent and among all, total pages visited influenced the conversion most. 
 
-![Figure 1: Correlation Heatmap](https://github.com/viviczhou/Conversion-Rate/blob/master/Correlation%20Heatmap.png)
+![Figure 1: Correlation Heatmap](https://github.com/viviczhou/Conversion-Rate/blob/master/Correlation%20Heatmap.png =250x250)
 
 Users visit more pages tend to have a higher conversion rate.
 
