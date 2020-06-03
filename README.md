@@ -2,6 +2,12 @@
 
 ## Project Introduction
 
+#### What is conversion rate?
+Conversion rate here refers to the percentage of visitors that purchase some products before leaving the company's website out of the total number of visitors.
+
+#### Why predict conversion rate?
+
+
 ### Goal:
   1.	Predict conversion rate;
   2.	Come up with recommendations for product team and the marketing team to improve conversion rate.
