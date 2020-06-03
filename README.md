@@ -132,7 +132,7 @@ To give recommendations to product team and marketing team, I conducted analysis
    1.	It seems that users in China tend to have lower conversion rate, it might because the product does not suit Chinese customers (the reason still need to be further investigated). To improve conversion rate, you may design a subversion of your product that suits Chinese people more.
    2.	It seems that your product is more popular in users under the age of 30 than elder users, it might because that the product is less user-friendly to elder people or does not meet the need of elder people (the reason still need to be further investigated). To improve the conversion rate, you may design your product more senior friendly.
 
-### Suggestions for marketing team:
+### Suggestions for marketing team
 
    1.	The more pages visited, the higher the conversion rate. This fact may suggest that the marketing team should put ads for the product on more pages that has no ads yet.
    2.	The postcensal of Chinese market is huge and should be explore more. You can design some ads that is attractive to Chinses customers and try to put more ads on some popular Chinese websites.
