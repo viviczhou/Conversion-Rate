@@ -6,13 +6,13 @@
 Conversion rate here refers to the percentage of visitors that purchase some products before leaving the company's website out of the total number of visitors.
 
 #### Why predict conversion rate?
+Predicting the probability a customer will buy a recommendation based on his/her charateristics, such as age, region, total pages visited, and etc., is valuable for online shops. Predicting conversion rate is also a process of analyzing which characteristic of customers influnce their buying decision most. Knowing this will helps web shops to display the most optimal subset of recommendations to each group of customers, since they can only show a limited number of ads to each visitor.
 
+### Goal of this project
+1. Use the 'conversion_rate.csv' dataset given by a web shop to build a model and predict the conversion rate for its customers. 
+2. Based on the prediction analyze how each feature of customer influence the buying behavior and come up with suggestions for both the product team and the marketing team to improve the conversion rate.
 
-### Goal:
-  1.	Predict conversion rate;
-  2.	Come up with recommendations for product team and the marketing team to improve conversion rate.
-
-### Data:
+### Dataset overview
 The dataset ‘conversion_rate.csv’ has information about signed-in users during one session.
 Each row is a user session.
 
@@ -26,26 +26,25 @@ Each row is a user session.
           * Direct: came to the site by directly typing the URL on the browser
         * Total_pages_visited: number of total pages visited during the session. This is a proxy for time spent on site and engagement during the session
         * converted: this is our label. 1 means they converted within the session, 0 means they left without buying anything, in other words, not converted. The company goal is to increase converstion rate: #conversions/total sessions
+    
+    Description:
+        RangeIndex: 316200 entries, 0 to 316199
+        Data columns (total 6 columns):
+        country                316200 non-null object
+        age                    316200 non-null int64
+        new_user               316200 non-null int64
+        source                 316200 non-null object
+        total_pages_visited    316200 non-null int64
+        converted              316200 non-null int64
+        dtypes: int64(4), object(2)
+        memory usage: 14.5+ MB
 
-### Initial Plan:
-Use supervise learning to build a model and recognize users that are likely to be converted.
-Use the model to cluster user sessions to convert and not convert. 
-Count converted sessions and divided by total number of sessions.
+### Plan
+1. Conduct exploratory analysis to see the correlation between each feature and discover the influence of each feature on the conversion rate.
+2. Devide the dataset into training set, dev set, and test set. Use the training set to build classification models (logistic regression model, SVM, and random forest model), use the dev set to select the model with the best performance, and use the test set to predict the final result.
+3. Analyze feature importance using the selected model to see which feature influence the buying behavior most and come up with suggestions for the two teams to improve the conversion rate.
 
-## Data overview:
-
-    RangeIndex: 316200 entries, 0 to 316199
-    Data columns (total 6 columns):
-    country                316200 non-null object
-    age                    316200 non-null int64
-    new_user               316200 non-null int64
-    source                 316200 non-null object
-    total_pages_visited    316200 non-null int64
-    converted              316200 non-null int64
-    dtypes: int64(4), object(2)
-    memory usage: 14.5+ MB
-
-## Exploratory Analysis:
+## Exploratory Analysis
 
 Based on the result of correlation analysis of numerical features, as shown in Figure 1, features are independent and among all, total pages visited influenced the conversion most. 
 
@@ -65,7 +64,7 @@ As for categorical feature, according to the bar plots shown below, in which cou
 
 ![Figure 5: Relationship between Sources and Conversion Rate](https://github.com/viviczhou/Conversion-Rate/blob/master/source.png)
 
-## Method:
+## Method
 
 After converting categorical features to number by one-hot encoding, I divide the dataset into train, dev, and test set by the ratio of 7:2:1. The training set is used to train models, dev set is used to select the best model, and the test set is used to make the final prediction.
 
@@ -79,7 +78,7 @@ According to the performance of the three models on the dev set:
 
 The model selected is Random Forest.
 
-## Results:
+## Results
 
 The performance of the model is acceptable:
 
@@ -109,7 +108,7 @@ The prediction of the model is:
       - Predicted: 2.65%
       - Actual: 3.21%
 
-## Recommendations:
+## Recommendations
 
 To give recommendations to product team and marketing team, I conducted analysis regarding feature importance.
 
@@ -128,7 +127,7 @@ To give recommendations to product team and marketing team, I conducted analysis
 
 ![Figure 7: Feature Importance](https://github.com/viviczhou/Conversion-Rate/blob/master/Feature%20Importance.png)
 
-### Suggestions for product team:
+### Suggestions for product team
 
    1.	It seems that users in China tend to have lower conversion rate, it might because the product does not suit Chinese customers (the reason still need to be further investigated). To improve conversion rate, you may design a subversion of your product that suits Chinese people more.
    2.	It seems that your product is more popular in users under the age of 30 than elder users, it might because that the product is less user-friendly to elder people or does not meet the need of elder people (the reason still need to be further investigated). To improve the conversion rate, you may design your product more senior friendly.
